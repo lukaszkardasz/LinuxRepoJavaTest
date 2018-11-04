@@ -1,4 +1,4 @@
-package Main;
+package Main.ExceptionExercise;
 
 import java.util.NoSuchElementException;
 import java.util.Scanner;

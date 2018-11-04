@@ -13,8 +13,15 @@ public class Bank implements BankTransfer {
         to.wplata(kwota);
     }
 
+
+
     public static void main(String[] args) {
+
+
+
         Bank CreditAgricole = new Bank();
+        Bank mBank = new Bank();
+
         KontoBankowe konto1 = new KontoBankowe();
         KontoBankowe konto2 = new KontoBankowe();
 
@@ -22,10 +29,13 @@ public class Bank implements BankTransfer {
         konto2.wplata(80);
         konto2.wyplata(70);
 
-        CreditAgricole.transfer(konto1, konto2, 0);
+
+        CreditAgricole.transfer(konto1, konto2, 40);
+        mBank.transfer(konto1, konto2, 30);
 
         System.out.println(konto1.getStanKonta());
         System.out.println(konto2.getStanKonta());
 
     }
 }
+

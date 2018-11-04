@@ -1,7 +1,5 @@
 package Main.tShirt;
 
-import Main.Main;
-
 public enum tShirtSize {
 
     S(48, 71, 36),

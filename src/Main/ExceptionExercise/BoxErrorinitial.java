@@ -1,4 +1,4 @@
-package Main;
+package Main.ExceptionExercise;
 
 
 public class BoxErrorinitial<T> {
