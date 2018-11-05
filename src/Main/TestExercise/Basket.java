@@ -1,5 +1,6 @@
 package Main.TestExercise;
 
+import java.util.Collections;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -11,7 +12,7 @@ public class Basket {
 
     public void add(Item item, int quantity){
         if (quantity <=0){
-            throw new IllegalArgumentException(String.format("Niewłaściwa ilość zamówionego towaru = %3d!", quantity))
+            throw new IllegalArgumentException(String.format("Niewłaściwa ilość zamówionego towaru = %3d!", quantity));
         }
         if (orderedItems.containsKey(item)){
             quantity = orderedItems.get(item) + quantity;
@@ -25,14 +26,14 @@ public class Basket {
 
     public void remove(Item item, int quantity){
         if (quantity <=0){
-            throw new IllegalArgumentException(String.format("Niewłaściwa ilość zamówionego towaru = %3d!", quantity))
+            throw new IllegalArgumentException(String.format("Niewłaściwa ilość zamówionego towaru = %3d!", quantity));
         }
         quantity = orderedItems.get(item) - quantity;
 
         if (quantity == 0){
             orderedItems.remove(item);
         } else if (quantity < 0){
-            throw new IllegalStateException(String.format("Nie ma wystarczającej ilości towaru do usunięcia z koszyka!")):
+            throw new IllegalStateException(String.format("Nie ma wystarczającej ilości towaru do usunięcia z koszyka!"));
         } else
             orderedItems.put(item, quantity);
 
@@ -43,12 +44,45 @@ public class Basket {
         remove(item, 1);
     }
 
+    public double getOrderValue() {
+        double orderValue = 0;
+
+        for(Map.Entry<Item, Integer> itemOrder : orderedItems.entrySet()) {
+            orderValue += itemOrder.getKey().getPrice() * itemOrder.getValue();
+        }
+
+        return orderValue;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder result = new StringBuilder();
+
+        for(Map.Entry<Item, Integer> itemOrder : orderedItems.entrySet()) {
+            Item item = itemOrder.getKey();
+            Integer quantity = itemOrder.getValue();
+            String itemString = String.format(
+                    ITEM_ORDER_FORMAT,
+                    item.getName(),
+                    item.getPrice(),
+                    quantity,
+                    item.getPrice() * quantity
+            );
+            result.append(itemString);
+            result.append(System.lineSeparator());
+        }
+        result.append(String.format("Total: %.2f", getOrderValue()));
+
+        return result.toString();
+    }
+
+    public Map<Item, Integer> getOrder() {
+        return Collections.unmodifiableMap(orderedItems);
+    }
 
     public static void main(String[] args) {
+        System.out.println();
 
-//        private item()
-//
-//        orderedItems.put()
 
     }
 }
