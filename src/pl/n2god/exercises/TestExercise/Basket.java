@@ -1,4 +1,4 @@
-package Main.TestExercise;
+package pl.n2god.exercises.TestExercise;
 
 import java.util.Collections;
 import java.util.Map;

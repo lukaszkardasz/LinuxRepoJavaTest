@@ -1,4 +1,4 @@
-package Main.StringFormatter;
+package pl.n2god.exercises.StringFormatter;
 
 import java.util.Formatter;
 import java.util.Locale;

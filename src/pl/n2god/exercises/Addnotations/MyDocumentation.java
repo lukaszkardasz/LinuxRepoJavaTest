@@ -1,4 +1,4 @@
-package Main.Addnotations;
+package pl.n2god.exercises.Addnotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

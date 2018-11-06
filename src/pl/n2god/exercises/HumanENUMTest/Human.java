@@ -1,4 +1,4 @@
-package Main.HumanENUMTest;
+package pl.n2god.exercises.HumanENUMTest;
 
 public class Human {
 

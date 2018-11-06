@@ -1,4 +1,4 @@
-package Main.BankExercise;
+package pl.n2god.exercises.BankExercise;
 
 public class Bank implements BankTransfer {
 

@@ -1,4 +1,4 @@
-package Main.TestExercise;
+package pl.n2god.exercises.TestExercise;
 
 public class Item implements Comparable<Item> {
 

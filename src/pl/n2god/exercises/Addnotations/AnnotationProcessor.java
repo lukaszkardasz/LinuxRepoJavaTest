@@ -1,4 +1,4 @@
-package Main.Addnotations;
+package pl.n2god.exercises.Addnotations;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationTargetException;

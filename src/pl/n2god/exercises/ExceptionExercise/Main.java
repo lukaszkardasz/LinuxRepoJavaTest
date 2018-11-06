@@ -1,4 +1,4 @@
-package Main.ExceptionExercise;
+package pl.n2god.exercises.ExceptionExercise;
 
 import java.util.NoSuchElementException;
 import java.util.Scanner;

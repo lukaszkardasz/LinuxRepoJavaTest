@@ -1,4 +1,4 @@
-package Main.tShirt;
+package pl.n2god.exercises.tShirt;
 
 public class Tshirt {
 

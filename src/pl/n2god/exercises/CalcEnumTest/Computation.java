@@ -1,4 +1,4 @@
-package Main.CalcEnumTest;
+package pl.n2god.exercises.CalcEnumTest;
 
 public enum Computation {
 
